@@ -1,3 +1,6 @@
+// Prints one pyramid of #
+// Based on World 1-1 in NES Super Mario
+
 #include <cs50.h>
 #include <stdio.h>
 
