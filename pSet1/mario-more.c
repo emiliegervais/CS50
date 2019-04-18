@@ -1,4 +1,4 @@
-// Prints two hashes pyramids
+// Prints two pyramids of #
 // Based on World 1-1 in NES Super Mario
 
 #include <cs50.h>
