@@ -7,7 +7,6 @@ void pyramid(int h);
 int main(void)
 {
     int height = get_height_int("Height: ");
-    // Height equals number of rows
     pyramid(height);
 }
 
@@ -19,16 +18,13 @@ void pyramid(int rows)
         // Repeat for as long as num of columns is less than num of rows
 	    for (int col = 0; col < rows; col++)
         {
-            // Print space
             // Grid starts at 0 => rows - 1
             // Equivalent to the current grid row => i 
             if (col < (rows - 1 - i))
                 printf(" ");
-            // Print hash
             else
                 printf("#");
         }
-        // Go to new line
         printf("\n");
     }
 }
