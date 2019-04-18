@@ -10,7 +10,6 @@ void pyramid(int height);
 int main(int argc, string argv[])
 {
     int height = get_height("Height: ");
-    // Height equals number of rows 
     pyramid(height);
 }
 
@@ -40,7 +39,6 @@ void pyramid(int rows)
             else
                 printf("#");     
         }
-        // Go to new line
         printf("\n");
     }
 }
