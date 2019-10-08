@@ -1,0 +1,11 @@
+1. Check that the user added an argument when calling the program  
+  - make sure there is only two arguments, no more, no less (the call to the program, and the key)
+  - make sure that the second argument is a decimal number
+  - if it is, convert it from string to int
+2. Prompt user for a short plaintext to rotate over
+3. Iterate over the characters of the text
+  - if the char is an uppercase letter, rotate it as an uppercase character
+  - if the char is a lowercase letter, rotate it as a lowercase character
+  - if it is neither, print it out without rotating
+4. Print out the cyphered text  
+5. Print a newline
