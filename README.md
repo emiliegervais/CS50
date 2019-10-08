@@ -1,7 +1,5 @@
-# CS50x
-<p>Harvard CS50x, 2019<br>
-    <em>course followed on edX</em>
-</p>
+# Harvard CS50x, 2019
+<p><em>Course followed on edX</em></p>
 <p>This repository contains my solutions to problem sets for CS50x.</p>
 <ul>
   <li>pSet0 → Scratch project</li>
