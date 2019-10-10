@@ -4,29 +4,27 @@
 #include <stdio.h>
 #include <math.h>
 
+float change;
+int cents;
+int coins;
+
 // Coins available based on american currency
 int quarter = 25;
 int dime = 10;
 int nickel = 5;
 int penny = 1;
 
-// Initiate amount of minimum amount of coins owned at 0
-int coins;
-
 int main(void) 
 {
-    // Initiate change
-    float change;
     // while change is negative
     //     prompt the user for how much change is owed
-    do 
+    while (change < 0)
     {
         change = get_float("Changed Owed: ");
     }
-    while (change < 0);
     
     // Round change amount to the nearest penny
-    int cents = round(change * 100);
+    cents = round(change * 100);
     
     // REFACTOR THIS PART
     //     count amount of quarters, dimes, nickels and pennies held in cents
