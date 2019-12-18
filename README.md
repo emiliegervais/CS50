@@ -2,7 +2,7 @@
 
 **Course followed on [edX](https://www.edx.org/course/cs50s-introduction-to-computer-science).**
 
-This repository contains my solutions to problem sets for CS50x:
+This repository contains my solutions to each problem sets:
 
 - Week 0: [pSet0](./pSet0/) → Scratch
     - [journey.sb3](./pSet0/journey.sb3)
