@@ -1,0 +1,79 @@
+/* Base */
+html {
+   font-size: 100%;
+   /*scroll-behavior: smooth;*/
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: #111;
+}
+
+a:hover {
+    color: #111;
+}
+
+pre {
+    margin-bottom: 0;
+}
+
+figure {
+   margin: 0;
+   padding: 0;
+}
+
+figure > img {
+   width: 100%;
+   border-radius: 0.2rem;
+}
+
+/* Helpers */
+/* Using www.patternify.com to generate the background pattern */
+.dots {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAEklEQVQImWNgYGD4z0AswK4SAFXuAf8EPy+xAAAAAElFTkSuQmCC") repeat;
+}
+
+/* Components */
+#original-doge {
+   max-width: 10vw;
+}
+
+/* Layout */
+header,
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1rem;
+    background-color: #FEFEFE;
+    box-shadow: 0 0 0.1rem #111;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+nav ul > li {
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+/* Using www.patternify.com to generate the background pattern */
+main {
+    min-height: 100vh;
+    padding: 5rem 0;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAJElEQVQYlWNgwAT/sYjhVIRXMbokVsW4TPhPjCJi5clXTBwAAOy+CfekNMf3AAAAAElFTkSuQmCC") repeat;
+}
+
+main [class*='col-'] {
+    margin: 3rem;
+    background-color: #FEFEFE;
+}
+
+footer {
+    padding-bottom: 0.5rem;
+}
