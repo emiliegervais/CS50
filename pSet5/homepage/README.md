@@ -1,6 +1,5 @@
-# Homepage
+# Homepage Instructions
 
-*Instructions*
 **Build a simple homepage using HTML and CSS.**
 
 Implement in your homepage directory a website that must:
