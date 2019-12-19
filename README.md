@@ -7,12 +7,12 @@ This repository contains my solutions to each problem sets:
 - [pSet0](./pSet0/) → Scratch
     - [journey.sb3](./pSet0/journey.sb3)
 - [pSet1](./pSet1/) → C 
-    - [hello.c](./pSet1/hello/)
-    - [mario-less.c](./pSet1/mario/less/)
-    - [mario-more.c](./pSet1/mario/more/)
-    - [cash.c](./pSet1/cash/)
+    - [Hello](./pSet1/hello/)
+    - [Mario (less)](./pSet1/mario/less/)
+    - [Mario (more)](./pSet1/mario/more/)
+    - [Cash](./pSet1/cash/)
 - [pSet2](./pSet2/) → C
-    - [caesar.c](./pSet2/caesar.c)
+    - [Caesar](./pSet2/caesar.c)
 - [pSet3](./pSet3/) → C
 - [pSet4](./pSet4/) → C
 - [pSet5](./pSet5/) → Web Programming
