@@ -16,8 +16,14 @@ This repository contains my solutions to each problem sets:
 - [pSet3](./pSet3/) → C
 - [pSet4](./pSet4/) → C
 - [pSet5](./pSet5/) → Web Programming
-    - [homepage](./pSet5/homepage/)
-- [pSet6](./pSet6/) → 
+    - [Homepage](./pSet5/homepage/)
+- [pSet6](./pSet6/) → Python
+    - [Hello](./pSet6/hello/)
+    - [Mario (Less)](./pSet6/mario/less/)
+    - [Mario (More)](./pSet6/mario/more/)
+    - [Cash](./pSet6/cash/)
+    - [Caesar](./pSet6/caesar/)
+    - [Bleep](./pSet6/bleep/)
 - [pSet7](./pSet7/) → 
 - [pSet8](./pSet8/) → 
 - **Off on week 9**
