@@ -26,5 +26,5 @@ This repository contains my solutions to each problem sets:
     - [Bleep](./pSet6/bleep/)
 - pSet7 → 
 - pSet8 → 
-- **Off on week 9**
+- **Week 9 is off**
 - pSet10 → 
