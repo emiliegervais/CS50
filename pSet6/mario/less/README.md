@@ -77,4 +77,4 @@ Height: 4
 ```
 
 
-Full instructions available (here)[https://docs.cs50.net/2019/x/psets/6/sentimental/mario/less/mario.html]
+Full instructions available [here](https://docs.cs50.net/2019/x/psets/6/sentimental/mario/less/mario.html)

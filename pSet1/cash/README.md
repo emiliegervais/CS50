@@ -33,4 +33,4 @@ Change owed: 0.41
 ```
 
 
-Full instructions available (here)[https://lab.cs50.io/cs50/labs/2019/x/cash/]
+Full instructions available [here](https://lab.cs50.io/cs50/labs/2019/x/cash/)

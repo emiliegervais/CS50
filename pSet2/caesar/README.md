@@ -51,4 +51,4 @@ Usage: ./caesar key
 ```
 
 
-Full instructions available (here)[https://lab.cs50.io/cs50/labs/2019/x/caesar/]
+Full instructions available [here](https://lab.cs50.io/cs50/labs/2019/x/caesar/)

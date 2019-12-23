@@ -38,4 +38,4 @@ Change owed: 0.41
 ```
 
 
-Full instructions available (here)[https://docs.cs50.net/2019/x/psets/6/sentimental/cash/cash.html]
+Full instructions available [here](https://docs.cs50.net/2019/x/psets/6/sentimental/cash/cash.html)

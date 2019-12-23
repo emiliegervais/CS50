@@ -59,4 +59,4 @@ Height: 4
 ```
 
 
-Full instructions available (here)[https://lab.cs50.io/cs50/labs/2019/x/mario/more/]
+Full instructions available [here](https://lab.cs50.io/cs50/labs/2019/x/mario/more/)

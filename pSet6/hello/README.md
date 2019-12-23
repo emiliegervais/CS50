@@ -27,4 +27,4 @@ hello, Veronica
 ```
 
 
-Full instructions available (here)[https://docs.cs50.net/2019/x/psets/6/sentimental/hello/hello.html]
+Full instructions available [here](https://docs.cs50.net/2019/x/psets/6/sentimental/hello/hello.html)
