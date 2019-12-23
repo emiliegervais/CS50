@@ -24,7 +24,8 @@ This repository contains my solutions to each problem sets:
     - [Cash](./pSet6/cash/)
     - [Caesar](./pSet6/caesar/)
     - [Bleep](./pSet6/bleep/)
-- pSet7 → 
-- pSet8 → 
+- pSet7 → Flask & AJAX
+    - [Similarities](./pSet7/similarities)
+- pSet8 → SQL
 - **Week 9 is off**
 - pSet10 → 

@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <div class="col">
+        <form action="/compare" enctype="multipart/form-data" method="post">
+
+            <div class="form-group">
+                <label for="file1">Pick your first file:</label>
+                <input type="file" name="file1" />
+            </div>
+
+            <div class="form-group">
+                <label for="file2">Pick your second file:</label>
+                <input type="file" name="file2" />
+            </div>
+
+            <div class="form-group">
+                <p>What do you want to compare in both files?</p>
+                <label for="lines">
+                    <input type="radio" name="algorithm" value="Lines" checked />
+                    Lines
+                </label>
+
+                <label for="sentences">
+                     <input type="radio" name="algorithm" value="Sentences" />
+                     Sentences
+                </label>
+
+                <label for="substrings">
+                    <input type="radio" name="algorithm" value="Substrings" />
+                    Substrings
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="length">Pick a length:</label>
+                <input type="number" name="length" min="1" max="9" placeholder="What's the length?" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Compare</button>
+            </div>
+
+        </form>
+    </div>
+
+{% endblock %}
