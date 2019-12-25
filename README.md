@@ -26,6 +26,7 @@ This repository contains my solutions to each problem sets:
     - [Bleep](./pSet6/bleep/)
 - pSet7 → Flask & AJAX
     - [Similarities](./pSet7/similarities)
+    - [Survey](./pSet7/survey)
 - pSet8 → SQL
 - **Week 9 is off**
 - pSet10 → 

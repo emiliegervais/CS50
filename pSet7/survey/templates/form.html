@@ -1,0 +1,249 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <!-- http://getbootstrap.com/docs/4.1/content/typography/ -->
+    <h1 class="mb-3">Soylent for Cats Survey form</h1>
+
+    <!-- http://getbootstrap.com/docs/4.1/components/forms/ -->
+    <form action="/form" method="post" class="col-sm-12 col-md-6 col-lg-4 needs-validation" novalidate>
+        <div class="form-group">
+            <label id="name-label" for="name">
+                What's your name?
+            </label>
+            <input
+                id="name"
+                name="name"
+                class="form-control"
+                type="text"
+                placeholder="Please enter your name."
+                required
+            />
+            <div class="invalid-feedback">
+                Please provide your name.
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">
+                What's your email address?
+            </label>
+            <input
+                id="email"
+                name="email"
+                class="form-control"
+                type="email"
+                placeholder="Please enter your email address."
+                required
+            />
+            <div class="invalid-feedback">
+                Please provide your email address.
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">
+                How many cats do you take care of?
+            </label>
+            <input
+                id="number"
+                name="number"
+                class="form-control"
+                type="number"
+                min="0"
+                max="9"
+                placeholder="Please tell us the number of cats you take care of."
+                required
+            />
+            <div class="invalid-feedback">
+                Please tell us the number of cats you take care of.
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="form-group">
+            <p>Why are you a cat lover? <span class="small">(select all that applies)</span></p>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="catlover"
+                    value="I dunno, I just love cats!"
+                />
+                <label class="form-check-label">
+                    I dunno, I just love cats!
+                </label>
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="catlover"
+                    value="I'm a cat too."
+                />
+                <label class="form-check-label">
+                    I'm a cat too.
+                </label>
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="catlover"
+                    value="Cats are my family."
+                />
+                <label class="form-check-label">
+                    Cats are my family.
+                </label>
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="catlover"
+                    value="I like how they are not like dogs."
+                />
+                <label class="form-check-label">
+                    I like how they are not like dogs.
+                </label>
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="catlover"
+                    value="I love cat food, so I love cats. 🐱"
+                />
+                <label class="form-check-label">
+                    I love cat food, so I love cats. 🐱
+                </label>
+            </div>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="checkbox"
+                    name="catlover"
+                    value="I don't, this is a misunderstanding."
+                />
+                <label class="form-check-label">
+                    I don't, this is a misunderstanding.
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <p>Which option best describes how most cats you take care of eat?</p>
+            <select id="dropdown" name="behaviors">
+                <option selected disabled>Choose behavior</option>
+                <option value="Hunts to eat">Hunts to eat</option>
+                <option value="Mostly dry cat food">Mostly dry cat food</option>
+                <option value="Mostly dog food">Mostly dog food</option>
+                <option value="Wet food only">Wet food only</option>
+                <option value="Human food">Human food</option>
+                <option value="Eats hamster food">Eats hamster food</option>
+                <option value="Doesn't eat, has a food disorder">Doesn't eat, has a food disorder</option>
+                <option value="Pizza gifs">Pizza gifs</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p>Have you ever eaten Soylent yourself?</p>
+            <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soylent"
+                    value="Everyday I do."
+                    required
+                />
+                <label class="form-check-label">
+                    Everyday I do.
+                </label>
+            </div>
+             <div class="form-check">
+                 <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soylent"
+                    value="One time at the musical camp..."
+                    required
+                />
+                 <label class="form-check-label">
+                    One time at the musical camp...
+                </label>
+            </div>
+             <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soylent"
+                    value="Drank food, not sure it was Soylent"
+                    required
+                />
+                <label class="form-check-label">
+                    Drank food, not sure it was Soylent
+                </label>
+            </div>
+             <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soylent"
+                    value="Never, ew!"
+                    required
+                />
+                <label class="form-check-label">
+                    Never, ew!
+                </label>
+            </div>
+             <div class="form-check">
+                <input
+                    class="form-check-input"
+                    type="radio"
+                    name="soylent"
+                    value="In the future I did 😉"
+                    required
+                />
+                <label class="form-check-label">
+                    In the future I did 😉
+                </label>
+            </div>
+            <div class="invalid-feedback">
+                Please let us know if you have yourself eaten soylent before.
+            </div>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="form-group">
+            <p>Share your comments and suggestions with us:</p>
+            <textarea class="form-control" name="comments" placeholder="Please enter comments and suggestions here."></textarea>
+        </div>
+        <!-- http://getbootstrap.com/docs/4.1/components/buttons/ -->
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    <script>
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+{% endblock %}

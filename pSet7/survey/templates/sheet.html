@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h1 class="mb-3">Soylent for Cats Survey Results</h1>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-sm">
+            <thead>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Number of Cats</th>
+                <th scope="col">Reasons for Being a Cat Lover</th>
+                <th scope="col">Cats Eating Behavior</th>
+                <th scope="col">Has Eaten Soylent</th>
+                <th scope="col">Comments and Suggestions</th>
+            </thead>
+            <tbody>
+                {% for element in data %}
+                    <tr>
+                        <td>{{ element["name"] }}</td>
+                        <td>{{ element["email"] }}</td>
+                        <td>{{ element["number"] }}</td>
+                        <td>{{ element["catlover"] }}</td>
+                        <td>{{ element["behaviors"] }}</td>
+                        <td>{{ element["soylent"] }}</td>
+                        <td>{{ element["comments"] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
