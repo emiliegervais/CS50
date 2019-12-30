@@ -25,8 +25,8 @@ int main(int argc, string argv[])
             int length = strlen(text);
             // Create an array of the same length for the ciphered characters
             char res[length];
-            // Print "cyphertext: " now 
-            //     because I didn't find how to concatenate the ciphered characters at the end of the loop
+            // Print "ciphertext: " now 
+            // ---> didn't find how to concatenate the ciphered characters at the end of the loop, is that possible with C? 
             printf("ciphertext: ");
             for (int i = 0; i < length; i++) 
             {
