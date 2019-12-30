@@ -1,4 +1,4 @@
-# Ceasar Instructions
+# Vigenère Instructions
 
 
 ## tl;dr
