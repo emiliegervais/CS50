@@ -1,4 +1,4 @@
-# Similarities Instructions
+# Survey Instructions
 
 
 ## tl;dr
