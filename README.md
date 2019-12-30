@@ -12,7 +12,8 @@ This repository contains my solutions to each problem sets:
     - [Mario (more)](./pSet1/mario/more/)
     - [Cash](./pSet1/cash/)
 - pSet2 → C
-    - [Caesar](./pSet2/caesar.c)
+    - [Caesar](./pSet2/caesar/)
+    - [Vigenere](./pSet2/vigenere/)
 - pSet3 → C
 - pSet4 → C
 - pSet5 → Web Programming
