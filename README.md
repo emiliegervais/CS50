@@ -28,5 +28,6 @@ This repository contains my solutions to each problem sets:
     - [Similarities](./pSet7/similarities)
     - [Survey](./pSet7/survey)
 - pSet8 → SQL
+    - [Finance](./pSet8/finance/)
 - **Week 9 is off**
 - pSet10 → 
