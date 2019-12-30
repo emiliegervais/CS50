@@ -4,6 +4,7 @@
 ## tl;dr
 Caesar Cipher: `ci = (pi + k) % 26` wherein % 26 here means “remainder when dividing by 26.” 
 
+
 ## Specification
 Let’s write a program called caesar that enables you to encrypt messages using Caesar’s cipher. At the time the user executes the program, they should decide, by providing a command-line argument, on what the key should be in the secret message they’ll provide at runtime. We shouldn’t necessarily assume that the user’s key is going to be a number; though you may assume that, if it is a number, it will be a positive integer.
 
