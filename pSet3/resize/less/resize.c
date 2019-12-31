@@ -19,9 +19,10 @@ int main(int argc, char *argv[])
     char *infile = argv[2];
     char *outfile = argv[3];
 
-    // Convert string to integer with the atoi function
+    // convert string to integer with the atoi function
     int num = atoi(n);
 
+    // make sure num is a positive integer less or equal than 100
     if (num < 0 || num > 100)
     {
         fprintf(stderr, "n must be a positive integer less than or equal to 100\n");
@@ -63,21 +64,21 @@ int main(int argc, char *argv[])
         return 4;
     }
 
-    // Store infile width and height
+    // store infile width and height
     int infile_width = bi.biWidth;
     int infile_height = bi.biHeight;
 
-    // Get outfile width and height
+    // get outfile width and height
     int outfile_width = infile_width * num;
     int outfile_height = infile_height * num;
 
-    // Get infile padding using infile_width
+    // get infile padding using infile_width
     int infile_padding = (4 - (infile_width * sizeof(RGBTRIPLE)) % 4) % 4;
 
-    // Get oufile padding using outfile_width
+    // get oufile padding using outfile_width
     int outfile_padding = (4 - (outfile_width * sizeof(RGBTRIPLE)) % 4) % 4;
 
-    // Get new data for outfile headers
+    // get new data for outfile headers
     bi.biWidth = outfile_width;
     bi.biHeight = outfile_height;
     bi.biSizeImage = ((sizeof(RGBTRIPLE) * bi.biWidth) + outfile_padding) * abs(bi.biHeight);
@@ -89,7 +90,7 @@ int main(int argc, char *argv[])
     // write outfile's BITMAPINFOHEADER
     fwrite(&bi, sizeof(BITMAPINFOHEADER), 1, outptr);
 
-    // Temporary storage for outfile scanline
+    // temporary storage for outfile scanline
     RGBTRIPLE scanline[bi.biWidth * sizeof(RGBTRIPLE)];
 
     // iterate over infile's scanlines
@@ -104,7 +105,7 @@ int main(int argc, char *argv[])
             // read RGB triple from infile
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
 
-            // Append scanline iterations to temporary scanline
+            // append scanline iterations to temporary scanline
             for (int k = 0; k < num; k++)
             {
                 scanline[(j * num) + k] = triple;
@@ -114,13 +115,13 @@ int main(int argc, char *argv[])
         // skip over padding, if any
         fseek(inptr, infile_padding, SEEK_CUR);
 
-        // Writing to file happens here
+        // write to outfile here
         for (int m = 0; m < num; m++)
         {
-            // Write temporary scanline to outfile
+            // write temporary scanline
             fwrite(scanline, sizeof(RGBTRIPLE), outfile_width, outptr);
 
-            // Add outfile padding
+            // add padding
             for (int n = 0; n < outfile_padding; n++)
             {
                 fputc(0x00, outptr);
