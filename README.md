@@ -16,6 +16,7 @@ This repository contains my solutions to each problem sets:
     - [Vigenere](./pSet2/vigenere/)
 - pSet3 → C
     - [Whodunit](./pSet3/whodunit/)
+    - [Resize (less)](./pSet3/resize/less/)
 - pSet4 → C
 - pSet5 → Web Programming
     - [Homepage](./pSet5/homepage/)
