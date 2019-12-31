@@ -17,6 +17,7 @@ This repository contains my solutions to each problem sets:
 - pSet3 → C
     - [Whodunit](./pSet3/whodunit/)
     - [Resize (less)](./pSet3/resize/less/)
+    - [Recover](./pSet3/recover/)
 - pSet4 → C
 - pSet5 → Web Programming
     - [Homepage](./pSet5/homepage/)
