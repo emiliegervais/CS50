@@ -52,36 +52,22 @@ int main(int argc, char *argv[])
             // if we already have an open jpeg || jpeg == true
             if (jpeg)
             {
-                // close file first and set jpeg back to false
+                // close opened file first
                 fclose(outptr);
                 // set flag to false
                 jpeg = false;
-                // create new filename for it
-                sprintf(filename, "%03i.jpg", img_num);
-                // open output file in write mode
-                // we need an empty file for writing
-                outptr = fopen(filename, "w");
-                // set flag to true
-                jpeg = true;
-                // increment filename counter
-                img_num++;
             }
-            // if we don't || jpeg == false
-            else
-            {
-                // start file
-                // create new filename for it
-                sprintf(filename, "%03i.jpg", img_num);
-                // open output file in write mode
-                // we need an empty file for writing
-                outptr = fopen(filename, "w");
-                // set flag to true
-                jpeg = true;
-                // increment filename counter
-                img_num++;
-            }
+            // create new filename for it
+            sprintf(filename, "%03i.jpg", img_num);
+            // open output file in write mode
+            // we need an empty file for writing
+            outptr = fopen(filename, "w");
             // write current buffer to file
             fwrite(buffer, sizeof(buffer), 1, outptr);
+            // set flag to true
+            jpeg = true;
+            // increment filename counter
+            img_num++;
         }
         // if it doesn't start with a jpeg header
         else
@@ -90,11 +76,7 @@ int main(int argc, char *argv[])
             if (jpeg)
             {
                 // write left buffer to file
-                fwrite(buffer, 512, 1, outptr);
-            }
-            else
-            {
-                // sleep
+                fwrite(buffer, sizeof(buffer), 1, outptr);
             }
         }
     }
