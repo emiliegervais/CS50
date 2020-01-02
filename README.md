@@ -4,34 +4,42 @@
 
 This repository contains my solutions to each problem sets:
 
-- pSet0 → Scratch
+- pSet0, 2019 → Scratch
     - [journey.sb3](./pSet0/journey.sb3)
-- pSet1 → C 
+- pSet1, 2019 → C 
     - [Hello](./pSet1/hello/)
     - [Mario (less)](./pSet1/mario/less/)
     - [Mario (more)](./pSet1/mario/more/)
     - [Cash](./pSet1/cash/)
-- pSet2 → C
+- pSet2, 2019 → C
     - [Caesar](./pSet2/caesar/)
     - [Vigenere](./pSet2/vigenere/)
-- pSet3 → C
+- pSet3, 2019 → C
     - [Whodunit](./pSet3/whodunit/)
     - [Resize (less)](./pSet3/resize/less/)
     - [Recover](./pSet3/recover/)
-- pSet4 → C
-- pSet5 → Web Programming
+- pSet3, 2020 → C
+    - [Plurality]
+    - [Runoff]
+    - [Tideman]
+- pSet4, 2019 → C
+    - [Speller]
+- pSet5, 2019 → Web Programming
     - [Homepage](./pSet5/homepage/)
-- pSet6 → Python
+- pSet5, 2020 → C
+    - [Speller]
+- pSet6, 2019 → Python
     - [Hello](./pSet6/hello/)
     - [Mario (Less)](./pSet6/mario/less/)
     - [Mario (More)](./pSet6/mario/more/)
     - [Cash](./pSet6/cash/)
     - [Caesar](./pSet6/caesar/)
     - [Bleep](./pSet6/bleep/)
-- pSet7 → Flask & AJAX
+- pSet7, 2019 → Flask & AJAX
     - [Similarities](./pSet7/similarities/)
     - [Survey](./pSet7/survey/)
-- pSet8 → SQL
-    - [Finance](./pSet8/finance/)
+- pSet8, 2020 → Web
+    - [Homepage]
+    - [Finance]
 - **Week 9 is off**
-- pSet10 → 
+- Final Project, 2020
