@@ -41,5 +41,4 @@ This repository contains my solutions to each problem sets:
 - pSet8, 2020 → Web
     - [Homepage]
     - [Finance]
-- **Week 9 is off**
 - Final Project, 2020
