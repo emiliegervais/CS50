@@ -19,7 +19,7 @@ This repository contains my solutions to each problem sets:
     - [Resize (less)](./pSet3/resize/less/)
     - [Recover](./pSet3/recover/)
 - pSet3, 2020 → C
-    - [Plurality]
+    - [Plurality](./pSet3/plurality)
     - [Runoff]
     - [Tideman]
 - pSet4, 2019 → C
