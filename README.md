@@ -36,7 +36,7 @@ This repository contains my solutions to each problem sets:
 - pSet7, 2019 → Flask & AJAX
     - [Similarities](./pSet7/similarities/)
     - [Survey](./pSet7/survey/)
-- pSet8, 2020 → Web
+- pSet8, 2020 → Track: Web
     - [Homepage](./pSet5/homepage/)
     - Finance
 - Final Project, 2020
