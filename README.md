@@ -24,8 +24,6 @@ This repository contains my solutions to each problem sets:
     - [Tideman]
 - pSet4, 2019 → C
     - [Speller]
-- pSet5, 2019 → Web Programming
-    - [Homepage](./pSet5/homepage/)
 - pSet5, 2020 → C
     - [Speller]
 - pSet6, 2019 → Python
@@ -39,6 +37,6 @@ This repository contains my solutions to each problem sets:
     - [Similarities](./pSet7/similarities/)
     - [Survey](./pSet7/survey/)
 - pSet8, 2020 → Web
-    - [Homepage]
+    - [Homepage](./pSet5/homepage/)
     - [Finance]
 - Final Project, 2020
