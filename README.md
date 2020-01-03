@@ -18,8 +18,8 @@ This repository contains my solutions to each problem sets:
     - [Whodunit](./pSet3/whodunit/)
     - [Resize (less)](./pSet3/resize/less/)
     - [Recover](./pSet3/recover/)
-    - [Plurality](./pSet3/plurality)
-    - Runoff
+    - [Plurality](./pSet3/plurality/)
+    - [Runoff](./pSet3/runoff/)
     - Tideman
 - pSet4, 2020 → C
     - Filter
