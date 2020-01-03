@@ -14,18 +14,18 @@ This repository contains my solutions to each problem sets:
 - pSet2, 2019 → C
     - [Caesar](./pSet2/caesar/)
     - [Vigenere](./pSet2/vigenere/)
-- pSet3, 2019 → C
-    - [Whodunit](./pSet3/whodunit/)
-    - [Resize (less)](./pSet3/resize/less/)
-    - [Recover](./pSet3/recover/)
-- pSet3, 2020 → C
-    - [Plurality](./pSet3/plurality)
-    - [Runoff]
-    - [Tideman]
-- pSet4, 2019 → C
-    - [Speller]
+- pSet3, 2019 + 2020→ C
+    - [Whodunit](./pSet3/whodunit/), 2019
+    - [Resize (less)](./pSet3/resize/less/), 2019
+    - [Recover](./pSet3/recover/), 2019
+    - [Plurality](./pSet3/plurality), 2020
+    - Runoff, 2020
+    - Tideman, 2020
+- pSet4, 2020 → C
+    - Filter
+    - Recover
 - pSet5, 2020 → C
-    - [Speller]
+    - Speller
 - pSet6, 2019 → Python
     - [Hello](./pSet6/hello/)
     - [Mario (Less)](./pSet6/mario/less/)
@@ -38,5 +38,5 @@ This repository contains my solutions to each problem sets:
     - [Survey](./pSet7/survey/)
 - pSet8, 2020 → Web
     - [Homepage](./pSet5/homepage/)
-    - [Finance]
+    - Finance
 - Final Project, 2020
