@@ -15,12 +15,12 @@ This repository contains my solutions to each problem sets:
     - [Caesar](./pSet2/caesar/)
     - [Vigenere](./pSet2/vigenere/)
 - pSet3, 2019 + 2020→ C
-    - [Whodunit](./pSet3/whodunit/), 2019
-    - [Resize (less)](./pSet3/resize/less/), 2019
-    - [Recover](./pSet3/recover/), 2019
-    - [Plurality](./pSet3/plurality), 2020
-    - Runoff, 2020
-    - Tideman, 2020
+    - [Whodunit](./pSet3/whodunit/)
+    - [Resize (less)](./pSet3/resize/less/)
+    - [Recover](./pSet3/recover/)
+    - [Plurality](./pSet3/plurality)
+    - Runoff
+    - Tideman
 - pSet4, 2020 → C
     - Filter
     - Recover
