@@ -219,8 +219,8 @@ bool is_tie(int min)
     // min is equivalent the to minimum number of votes
     // the minimum number of votes is equivalent to the last-placed candidates
     // before eliminating them, we need to consider if it's a tie:
-    //      if all remaining candidates' number of votes is equivalent to min,
-    //      we don't want to eliminate all of them -> all of them wins!
+    //  if all remaining candidates' number of votes is equivalent to min,
+    //  we don't want to eliminate all of them -> all of them wins!
 
     // initiate integers for ties and eliminated
     int ties, eliminated;
