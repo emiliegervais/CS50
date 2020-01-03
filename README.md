@@ -17,13 +17,12 @@ This repository contains my solutions to each problem sets:
 - pSet3, 2019 + 2020→ C
     - [Whodunit](./pSet3/whodunit/)
     - [Resize (less)](./pSet3/resize/less/)
-    - [Recover](./pSet3/recover/)
     - [Plurality](./pSet3/plurality/)
     - [Runoff](./pSet3/runoff/)
     - Tideman
 - pSet4, 2020 → C
     - Filter
-    - Recover
+    - [Recover](./pSet4/recover/)
 - pSet5, 2020 → C
     - Speller
 - pSet6, 2019 → Python
