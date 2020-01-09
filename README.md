@@ -11,19 +11,20 @@ This repository contains my solutions to each problem sets:
     - [Mario (less)](./pSet1/mario/less/)
     - [Mario (more)](./pSet1/mario/more/)
     - [Cash](./pSet1/cash/)
-- pSet2, 2019 → C
+- pSet2, 2019 → Arrays (C)
     - [Caesar](./pSet2/caesar/)
     - [Vigenere](./pSet2/vigenere/)
-- pSet3, 2019 + 2020→ C
+- pSet3, 2019 + 2020 → Algorithms (C)
     - [Whodunit](./pSet3/whodunit/)
     - [Resize (less)](./pSet3/resize/less/)
     - [Plurality](./pSet3/plurality/)
     - [Runoff](./pSet3/runoff/)
-    - Tideman
-- pSet4, 2020 → C
-    - Filter
+    - [Tideman](./pSet3/tideman/)
+- pSet4, 2020 → Memory (C)
+    - Filter (less)
+    - Filter (more)
     - [Recover](./pSet4/recover/)
-- pSet5, 2020 → C
+- pSet5, 2020 → Data Structures (C)
     - Speller
 - pSet6, 2019 → Python
     - [Hello](./pSet6/hello/)
