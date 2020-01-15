@@ -6,7 +6,7 @@ This repository contains my solutions to each problem sets:
 
 - pSet0, 2019 → Scratch
     - [journey.sb3](./pSet0/journey.sb3)
-- pSet1, 2019 → C 
+- pSet1, 2019 → C
     - [Hello](./pSet1/hello/)
     - [Mario (less)](./pSet1/mario/less/)
     - [Mario (more)](./pSet1/mario/more/)
@@ -21,7 +21,7 @@ This repository contains my solutions to each problem sets:
     - [Runoff](./pSet3/runoff/)
     - [Tideman](./pSet3/tideman/)
 - pSet4, 2020 → Memory (C)
-    - Filter (less)
+    - [Filter (less)](./pSet4/filter/less/)
     - Filter (more)
     - [Recover](./pSet4/recover/)
 - pSet5, 2020 → Data Structures (C)
