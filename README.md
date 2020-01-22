@@ -25,7 +25,7 @@ This repository contains my solutions to each problem sets:
     - Filter (more)
     - [Recover](./pSet4/recover/)
 - pSet5, 2020 → Data Structures (C)
-    - Speller
+    - [Speller](./pSet5/speller/)
 - pSet6, 2019 → Python
     - [Hello](./pSet6/hello/)
     - [Mario (Less)](./pSet6/mario/less/)
