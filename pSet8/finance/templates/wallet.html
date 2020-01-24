@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<h1 class="display-4">Add to Wallet</h1>
+<form action="/wallet" method="post">
+	<div class="form-group">
+		<input
+			autocomplete="off"
+			autofocus
+			class="form-control"
+			name="amount"
+			placeholder="Amount"
+			type="number"
+			min="1"
+			step="any"
+		/>
+	</div>
+	<button class="btn btn-primary" type="submit">Add to Wallet</button>
+</form>
+{% endblock %}

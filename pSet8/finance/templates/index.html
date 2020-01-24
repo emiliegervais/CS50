@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<h1 class="display-4">Portfolio</h1>
+{% if message is defined %}
+<p>{{ message }}</p>
+{% else %}
+<table class="table table-sm table-bordered">
+	<thead>
+		<tr>
+			<th scope="col">Symbol</th>
+			<th scope="col">Company</th>
+			<th scope="col">Shares</th>
+			<th scope="col">Unit Price (USD)</th>
+			<th scope="col">Total Value (USD)</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		{% for stock in stocks %}
+		<tr>
+			<td scope="row">{{ stock.symbol }}</td>
+			<td>{{ stock.name }}</td>
+			<td>{{ stock.shares }}</td>
+			<td>{{ stock.price }}</td>
+			<td>{{ stock.value }}</td>
+		</tr>
+		{% endfor %}
+		<tr>
+			<td scope="row" colspan="4" class="text-right font-weight-bold"
+				>Balance</td
+			>
+			<td class="font-weight-bold">{{ balance }}</td>
+		</tr>
+		<tr>
+			<th scope="row" colspan="4" class="text-right font-weight-bold">Total</th>
+			<td class="font-weight-bold">{{ value }}</td>
+		</tr>
+	</tbody>
+</table>
+{% endif %}
+{% endblock %}

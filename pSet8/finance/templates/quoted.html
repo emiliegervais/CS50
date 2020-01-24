@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+<h1 class="display-4">Stock Price</h1>
+<h2>{{ quote["price"] }}</h2>
+<p>{{ quote["name"] }} - {{ quote["symbol"] }}</p>
+{% endblock %}

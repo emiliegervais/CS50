@@ -37,6 +37,6 @@ This repository contains my solutions to each problem sets:
     - [Similarities](./pSet7/similarities/)
     - [Survey](./pSet7/survey/)
 - pSet8, 2020 → Track: Web
-    - [Homepage](./pSet5/homepage/)
-    - Finance
+    - [Homepage](./pSet8/homepage/)
+    - [Finance](./pSet8/finance/)
 - Final Project, 2020
