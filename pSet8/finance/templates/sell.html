@@ -7,23 +7,23 @@
 {% block main %}
 <h1 class="display-4">Sell Stocks</h1>
 <form action="/sell" method="post">
-	<div class="form-group">
-		<select class="form-control" name="symbol">
-			<option disabled selected>Stock Symbol</option>
-			{% for stock in stocks %}
-			<option value="{{ stock.symbol }}">{{ stock.symbol }}</option>
-			{% endfor %}
-		</select>
-	</div>
-	<div class="form-group">
-		<input
-			autocomplete="off"
-			class="form-control"
-			name="shares"
-			placeholder="Number of Shares"
-			type="text"
-		/>
-	</div>
-	<button class="btn btn-primary" type="submit">Sell</button>
+  <div class="form-group">
+    <select class="form-control" name="symbol">
+      <option disabled selected>Stock Symbol</option>
+      {% for stock in stocks %}
+      <option value="{{ stock.symbol }}">{{ stock.symbol }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="form-group">
+    <input
+      autocomplete="off"
+      class="form-control"
+      name="shares"
+      placeholder="Number of Shares"
+      type="text"
+    />
+  </div>
+  <button class="btn btn-primary" type="submit">Sell</button>
 </form>
 {% endblock %}
