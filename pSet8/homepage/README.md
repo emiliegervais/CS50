@@ -15,4 +15,4 @@ Implement in your `homepage` directory a website that must:
 - No need to include any JavaScript on your site for this problem set, unless so inclined!
 
 
-Full instructions available [here](https://docs.cs50.net/2019/x/psets/5/homepage/homepage.html)
+Full instructions available [here](https://cs50.harvard.edu/x/2020/tracks/web/homepage/)
