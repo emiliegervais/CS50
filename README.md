@@ -16,7 +16,6 @@ This repository contains my solutions to each problem sets:
     - [Vigenere](./pSet2/vigenere/)
 - pSet3, 2019 + 2020 → Algorithms (C)
     - [Whodunit](./pSet3/whodunit/)
-    - [Resize (less)](./pSet3/resize/less/)
     - [Plurality](./pSet3/plurality/)
     - [Runoff](./pSet3/runoff/)
     - [Tideman](./pSet3/tideman/)
