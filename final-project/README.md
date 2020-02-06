@@ -44,6 +44,6 @@ Status-code information was gathered from [Hypertext Transfer Protocol (HTTP) St
 Images are from [Museum of Internet](https://Museumofinter.net)
 
 ---
-Source for this project: (https://github.com/hexangel616/http-status-code-cheatsheet)[https://github.com/hexangel616/http-status-code-cheatsheet]
+Source for this project: [https://github.com/hexangel616/http-status-code-cheatsheet](https://github.com/hexangel616/http-status-code-cheatsheet)
 
-Project URL: (https://status-code-cheatsheet.herokuapp.com)[https://status-code-cheatsheet.herokuapp.com]
+Project URL: [https://status-code-cheatsheet.herokuapp.com](https://status-code-cheatsheet.herokuapp.com)
