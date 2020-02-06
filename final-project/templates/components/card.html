@@ -1,0 +1,40 @@
+{# _myapp/templates/components/card.html_ #}
+
+<div class="card">
+  <figure class="card__img">
+    <img
+      src="/static/images/{{ code.code }}.jpg"
+      alt="{{ code.reason_phrase }}"
+    />
+  </figure>
+  <div class="card__meta">
+    <h2>
+      {% if code.type is defined %}
+        {{ code.code }} {{ code.reason_phrase }} ({{ code.type }})
+      {% else %}
+        {{ code.code }} {{ code.reason_phrase }}
+      {% endif %}
+    </h2>
+    {% if code.status is defined %}
+      <p>{{ code.status | upper }}</p>
+    {% endif %}
+    <p>{{ code.definition | safe }}</p>
+    {% if code.rfc is defined %}
+      <p>
+        Defined in
+        <a 
+          href="{{code.rfc.url}}" 
+          title="RFC {{code.rfc.num}}" 
+          target="_blank"
+        >RFC {{code.rfc.num}}</a>.
+      </p>
+    {% endif %}
+    <hr />
+    <p>
+      <code>{{ code.code }} {{ code.reason_phrase }}</code>
+      is part of the <code>{{ code.classname }}</code> response class.
+      <br />
+      {{ code.class_definition | safe }}
+    </p>
+  </div>
+</div>

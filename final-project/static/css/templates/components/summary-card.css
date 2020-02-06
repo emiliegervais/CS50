@@ -1,0 +1,81 @@
+/* _myapp/static/css/templates/components/summary-card.css */
+
+.summary-card[open] > .summary-card__title {
+  color: var(--magenta-color);
+}
+
+.summary-card[open] .summary-card__title ~ * {
+  animation: fadein 0.3s ease-in-out;
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.summary-card__title {
+  font: 1.3em var(--title-font-stack);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.summary-card__title:hover {
+  color: var(--magenta-color);
+}
+
+.summary-card__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+@media screen and (min-width: 768px) {
+  .summary-card__content {
+    height: 400px;
+  }
+}
+
+.content__image {
+  width: 100%;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .content__image {
+    width: 40%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.content__image > img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+  object-fit: cover;
+}
+
+.content__meta {
+  padding: 0 1rem;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  .content__meta {
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+
+.content__meta a {
+  color: var(--light-color);
+  transition: all 0.2s ease;
+}
+
+.content__meta a:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}

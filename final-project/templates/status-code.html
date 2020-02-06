@@ -1,0 +1,16 @@
+{# _myapp/templates/status.html_ #} 
+
+{% extends "layout.html" %} 
+
+{% block title %} 
+  {{ code.code }} {{ code.reason_phrase }} | HTTP Status Code Cheatsheet
+{% endblock %} 
+
+{% block content %}
+<main class="status-code">
+  {% include "components/card.html" %}
+  {% with class="index", link="/", value="Index" %}
+    {% include "components/button.html" %}
+  {% endwith %}
+</main>
+{% endblock %}

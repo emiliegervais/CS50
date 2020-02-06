@@ -1,0 +1,549 @@
+{
+  "informational": {
+    "definition": "<code>Informational</code> status-codes indicate that the request initiated by the browser is continuing.",
+    "status": {
+      "100": {
+        "reason_phrase": "Continue",
+        "definition": "The request has been received and has not yet been rejected by the server. The server intends on sending a final response once the request has been completed meaning that the server has received the request headers and client can now proceed to send the request body. To have a server check the request's headers, a client must send <code>Expect: 100-continue</code> as a header in its initial request and receive a <code>100 Continue</code> status code in response before sending the body.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.2.1"
+        }
+      },
+      "101": {
+        "reason_phrase": "Switching Protocols",
+        "definition": "The request has asked the server to switch protocols. The server response indicates that it is switching protocol as requested. In this response, the srver includes an <code>Upgrade</code> response header to indicate the protocol it switched to.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.2.2"
+        }
+      },
+      "102": {
+        "reason_phrase": "Processing",
+        "type": "WebDAV",
+        "definition": "The request has been received and is being processed by the server, but no response is available yet. In the meantime, this response prevents the client from timing out and assuming the request was lost.",
+        "rfc": {
+          "num": "2518", 
+          "url": "https://tools.ietf.org/html/rfc2518#page-59"
+        }
+      },
+      "103": {
+        "reason_phrase": "Early Hints",
+        "definition": "The server is likely to send a final response with the header fields included in the informational response. Mainly intended to be used with the <code>Link</code> header to allow the user agent to start preloading resources while the server is still preparing a response.",
+        "rfc": {
+          "num": "8297", 
+          "url": "https://tools.ietf.org/html/rfc8297"
+        }
+      }
+    }
+  },
+  "successful": {
+    "definition": "<code>Successful</code> status-codes are returned when the browser request was succesfully received, understood and processed by the server.",
+    "status": {
+      "200": {
+        "reason_phrase": "OK",
+        "definition": "The request has succeeded. Its response is cacheable. The meaning of this response depends on the HTTP request method the server received: For <code>GET</code> requests, the resource has been fetched and is transmitted in the message body; for <code>HEAD</code> requests, the entity headers are in the message body; for <code>POST</code> requests, the resource describing the result of the action is transmitted in the message body; for <code>TRACE</code> requests, the message body contains the request message as received by the server. For <code>PUT</code> and <code>DELETE</code> requests, a successful request is often not a <code>200</code>, but a <code>204 No Content</code>.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.3.1"
+        }
+      },
+      "201": {
+        "reason_phrase": "Created",
+        "definition": "The request has been fulfilled and resulted in a new resource being created. Successful creation occurred (via either <code>POST</code> or <code>PUT</code>). The new resource is returned in the body of the message, its location being either the URL of the request, or the content of the Location header.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.3.2"
+        }
+      },
+      "202": {
+        "reason_phrase": "Accepted",
+        "definition": "The request has been accepted for processing, but the processing has not been completed. It is non-committal, meaning that there is no way for the HTTP to later send an asynchronous response indicating the outcome of processing the request. It is intended for cases where another process or server handles the request, or for batch processing.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.3.3"
+        }
+      },
+      "203": {
+        "reason_phrase": "Non-Authoritative Information",
+        "definition": "The request was successful but is returning a modified version of the origin's response resulting in an enclosed payload that has been modified by a transforming proxy from that of the origin server's <code>200 OK</code> response. The <code>203 Non-Authoritative Information</code> response is similar to the value <code>214 Transformation Applied</code> of the <code>Warning</code> header code, which has the additional advantage of being applicable to responses with any status code.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.3.5"
+        }
+      },
+      "204": {
+        "reason_phrase": "No Content",
+        "definition": "The request has succeeded, but the client doesn't need to go away from its current page. This response is cacheable by default and includes an <code>ETag</code> header. The common use case is to return <code>204 No Content</code> as a result of a <code>PUT</code> request, updating a resource, without changing the current content of the page displayed to the user. If the resource is created, <code>201 Created</code> is returned instead. If the page should be changed to the newly updated page, the <code>200 OK</code> should be used instead.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.3.5"
+        }
+      },
+      "205": {
+        "reason_phrase": "Reset Content",
+        "definition": "The request was successfully processed by the server, but is not returning any content. Similar to <code>204 No Content</code>, but lets the client know that it should reset the document view.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.3.6"
+        }
+      },
+      "206": {
+        "reason_phrase": "Partial Content",
+        "definition": "The request has succeeded, but the server is delivering only part of the resource due to a <code>Range</code> header sent by the client. If there is only one range, the <code>Content-Type</code> of the whole response is set to the type of the document, and a <code>Content-Range</code> is provided. If several ranges are sent back, the <code>Content-Type</code> is set to <code>multipart/byteranges</code> and each fragment covers one range, with <code>Content-Range</code> and <code>Content-Type</code> describing it.",
+        "rfc": {
+          "num": "7233", 
+          "url": "https://tools.ietf.org/html/rfc7233#section-4.1"
+        }
+      },
+      "207": {
+        "reason_phrase": "Multi-Status",
+        "type": "WebDAV",
+        "definition": "The request has succeeded and the body of the server's response is by default an XML message which can contain a number of separate responses codes, depending on how many sub-requests were made. Useful for situations where multiple status codes might be appropriate.",
+        "rfc": {
+          "num": "4918", 
+          "url": "https://www.iana.org/go/rfc4918"
+        }
+      },
+      "208": {
+        "reason_phrase": "Already Reported",
+        "type": "WebDAV",
+        "definition": "The request has succeeded and contains a collection: Only one element will be reported with a <code>200 OK</code> status. The others will be reported with a <code>208</code> status inside the response element <code><dav:propstat></code> to avoid repeatedly enumerating the internal members of multiple bindings to the same collection.",
+        "rfc": {
+          "num": "5842", 
+          "url": "https://www.iana.org/go/rfc5842"
+        }
+      },
+      "226": {
+        "reason_phrase": "IM Used",
+        "definition": "The request has succeeded and the response sent by the server is a representaiton of the result of one or more instance-manipulations applied to the current instance.",
+        "rfc": {
+          "num": "3229", 
+          "url": "https://www.iana.org/go/rfc3229"
+        }
+      }
+    }
+  },
+  "redirection": {
+    "definition": "<code>Redirection</code> status-codes are returned when a new resource has been substituted for the requested resource.",
+    "status": {
+      "300": {
+        "reason_phrase": "Multiple Choices",
+        "definition": "The request has more than one possible response. The user-agent or client should choose one of them. There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick. For example, this code could be used to present multiple video format options, to list files with different filename extensions, or to suggest word-sense disambiguation.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.4.2"
+        }
+      },
+      "301": {
+        "reason_phrase": "Moved Permanently",
+        "definition": "The request is looking for a resource that has moved permanently. Its new URL is given in the response.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.4.2"
+        }
+      },
+      "302": {
+        "reason_phrase": "Found",
+        "definition": "The request is looking for a resource with a URI that has been changed temporarily. Further changes in the URI might be made in the future. The current URI should be used by the client in future requests.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.4.3"
+        }
+      },
+      "303": {
+        "reason_phrase": "See Other",
+        "definition": "The request is looking for a resource that can be found at another URI using a <code>GET</code> method. When received in response to a <code>POST</code>, <code>PUT</code> or <code>DELETE</code>, it should assumed that the server has received the data and the redirect should be issued with a separate <code>GET</code> message.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.4.4"
+        }
+      },
+      "304": {
+        "reason_phrase": "Not Modified",
+        "definition": "The request is looking for resource that hasn't been modified since the last time the client accessed it, so the client can continue to use the same cached version of the response.",
+        "rfc": {
+          "num": "7232", 
+          "url": "https://tools.ietf.org/html/rfc7232#section-4.1"
+        }
+      },
+      "305": {
+        "reason_phrase": "Use Proxy",
+        "definition": "The request is looking for a resource that must be accessed by a proxy. It has been deprecated due to security concerns regarding in-band configuration of a proxy.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.4.5"
+        }
+      },
+      "306": {
+        "reason_phrase": "(Unused)",
+        "definition": "This response code is no longer used; it is just reserved. It was used in a previous version of the HTTP/1.1 specification.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.4.6"
+        }
+      },
+      "307": {
+        "reason_phrase": "Temporary Redirect",
+        "definition": "The request is looking for a resource that is currently redirected. The server sends this response to direct the client to get the requested resource at another URI with same method that was used in the prior request. Future requests can still use the original URI. <code>307 Temporary Redirect</code> has the same semantics has the <code>302 Found</code> response code, with the exception that the user agent must not change the HTTP method used: If a <code>POST</code> was used in the first request, a <code>POST</code> must be used in the second request.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.4.7"
+        }
+      },
+      "308": {
+        "reason_phrase": "Permanent Redirect",
+        "definition": "This means that the resource is now permanently located at another URI, specified by the <code>Location:</code> HTTP Response header. This has the same semantics as the <code>301 Moved Permanently</code> HTTP response code, with the exception that the user agent must not change the HTTP method used: If a <code>POST</code> was used in the first request, a <code>POST</code> must be used in the second request.",
+        "rfc": {
+          "num": "7538", 
+          "url": "https://tools.ietf.org/html/rfc7538#section-3"
+        }
+      }
+    }
+  },
+  "client-error": {
+    "definition": "<code>Client error</code> status-codes indicate that there was a problem with the request.",
+    "status": {
+      "400": {
+        "reason_phrase": "Bad Request",
+        "definition": "The request cannot be understood by the server due to invalid syntax.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.1"
+        }
+      },
+      "401": {
+        "reason_phrase": "Unauthorized",
+        "definition": "The request cannot be processed because it lacks valid authentication credentials for the target resource. This status is sent with a <code>WWW-Authenticate</code> header that contains information on how to authorize correctly. This status is similar to <code>403 Forbidden</code>, but in this case, authentication is possible.",
+        "rfc": {
+          "num": "7235", 
+          "url": "https://tools.ietf.org/html/rfc7235#section-3.1"
+        }
+      },
+      "402": {
+        "reason_phrase": "Payment Required",
+        "status": "Experimental",
+        "definition": "The request can not be processed until the client makes a payment. Originally it was created to enable digital cash or (micro) payment systems and would indicate that the requested content is not available until the client makes a payment. However, no standard use convention exists and different entities use it in different contexts. It is a nonstandard client error status response code that is reserved for future use.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.2"
+        }
+      },
+      "403": {
+        "reason_phrase": "Forbidden",
+        "definition": "The request was understood by the server but the server refuses to authorize it. This status is similar to <code>401 Unauthorized</code> except that in this case, re-authenticating will make no difference. The access is permanently forbidden and tied to the application logic, such as insufficient rights to a resource.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.3"
+        }
+      },
+      "404": {
+        "reason_phrase": "Not Found",
+        "definition": "The request is looking for a resource that can't be found by the server but may be available again in the future. Subsequent requests by the client are permissible. Links which lead to a 404 page are often called broken or dead links, and can be subject to <code>link rot</code>. A <code>404 Not Found</code> status code does not indicate whether the resource is temporarily or permanently missing. But if a resource is permanently removed, a <code>410 Gone</code> should be used instead of a <code>404 Not Found</code> status.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.4"
+        }
+      },
+      "405": {
+        "reason_phrase": "Method Not Allowed",
+        "definition": "The request method is known by the server but is not supported by the target resource. The server MUST generate an <code>Allow</code> header field in a <code>405 Method Not Allowed</code> response containing a list of the target resource's currently supported methods. For example, using <code>GET</code> on a form which requires data to be presented via <code>POST</code>, or using <code>PUT</code> on a read-only resource. ",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.5"
+        }
+      },
+      "406": {
+        "reason_phrase": "Not Acceptable",
+        "definition": "The request cannot be fulfilled by the server. The server cannot produce a response matching the list of acceptable values defined in the request's content negotiation headers and is unwilling to supply a default representation. Content negotiation headers include: <code>Accept</code>, <code>Accept-Charset</code>, <code>Accept-Encoding</code> and <code>Accept-Language</code>. <code>406 Not Acceptable</code> is rarely used: Servers usually ignore the relevant header and serve and actual page to the user. If a server returns such an error status, the body of the message should contain the list of the available representations of the resources, allowing the user to choose among them.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.6"
+        }
+      },
+      "407": {
+        "reason_phrase": "Proxy Authentication Required",
+        "definition": "The request has not been applied because it lacks valid authentication credentials for a proxy server that is between the browser and the server that can access the requested resource. The client must first authenticate itself with the proxy. This status is sent with a <code>Proxy-Authenticate</code> header that contains information on how to authorize correctly.",
+        "rfc": {
+          "num": "7235", 
+          "url": "https://tools.ietf.org/html/rfc7235#section-3.2"
+        }
+      },
+      "408": {
+        "reason_phrase": "Request Timeout",
+        "definition": "The request is taking too long. The server timed out waiting for it or decided to close the connection rather than continue waiting. The client MAY repeat the request without modifications at any later time. In the response, the server should send the close <code>Connection</code> header field. This response is used much more since some browsers, like Chrome, Firefox 27+, and IE9, use HTTP pre-connection mechanisms to speed up surfing.",
+        "rfc": {
+          "num": "7231",
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.7"
+        }
+      },
+      "409": {
+        "reason_phrase": "Conflict",
+        "definition": "The request could not be processed because it is in conflict with the current state of the server. Conflicts are most likely to occur in response to a <code>PUT</code> request. For example, you may get a <code>409 Conflict</code> response when uploading a file which is older than the one already on the server resulting in a version control conflict.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.8"
+        }
+      },
+      "410": {
+        "reason_phrase": "Gone",
+        "definition": "The request is looking for a resource that is no longer available and will not be available again. Upon receiving a <code>410 Gone</code> status code, the client should not request the resource again in the future. If you don't know whether this condition is temporary or permanent, a <code>404 Not Found</code> status code should be used instead.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.9"
+        }
+      },
+      "411": {
+        "reason_phrase": "Length Required",
+        "definition": "The request did not define <code>Content-Length</code> header, which is required by the requested resource so it cannot be accepted by the server. By specification, when sending data in a series of chunks, the <code>Content-Length</code> header is omitted and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.10"
+        }
+      },
+      "412": {
+        "reason_phrase": "Precondition Failed",
+        "definition": "The request has been denied access to the target resource. Per example, with conditional requests on methods other than <code>GET</code> and <code>HEAD</code> when the condition defined by the <code>If-Unmodified-Since</code> or <code>If-None-Match</code> headers is not fulfilled. In that case, the request, usually an upload or a modification of a resource, cannot be made and this error response is sent back.",
+        "rfc": {
+          "num": "7232", 
+          "url": "https://tools.ietf.org/html/rfc7232#section-4.2"
+        }
+      },
+      "413": {
+        "reason_phrase": "Payload Too Large",
+        "definition": "The request is larger than the limits defined by the server. The server might close the connection or return a <code>Retry-After</code> header field if the condition is temporary.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.11"
+        }
+      },
+      "414": {
+        "reason_phrase": "URI Too Long",
+        "definition": "The request is looking for an URI that is longer than what the server is willing to interpret. This is a rare condition that might occur when: A client has improperly converted a <code>POST</code> request to a <code>GET</code> request with more than ≈2 kB of submitted data; a client has descended into a loop of redirection or the server is under attack by a client attempting to exploit potential security holes.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.12"
+        }
+      },
+      "415": {
+        "reason_phrase": "Unsupported Media Type",
+        "definition": "The request is refued by the server because the payload format is unsurpported. The format problem might be due to the request's indicated <code>Content-Type</code> or <code>Content-Encoding</code>, or as a result of inspecting the data directly.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.13"
+        }
+      },
+      "416": {
+        "reason_phrase": "Range Not Satisfiable",
+        "definition": "The request was made for a specific portion of the resource, but the server cannot supply it. The most likely reason is that the document doesn't contain such ranges, or that the <code>Range</code> header value, though syntactically correct, doesn't make sense. The <code>416 Range Not Satisfiable</code> response message contains a <code>Content-Range</code> indicating an unsatisfied range (that is a <code>'*'</code>) followed by a <code>'/'</code> and the current length of the resource. For example: <code>Content-Range: bytes */12777</code>",
+        "rfc": {
+          "num": "7233", 
+          "url": "https://tools.ietf.org/html/rfc7233#section-4.4"
+        }
+      },
+      "417": {
+        "reason_phrase": "Expectation Failed",
+        "definition": "The request has requirements in its <code>Expect</code> header that the server can't meet.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.14"
+        }
+      },
+      "418": {
+        "reason_phrase": "I'm a teapot",
+        "definition": "The request wants the server the brew coffee, but the server refuses because it is a teapot. This error is a reference to Hyper Text Coffee Pot Control Protocol which was an April Fools' joke in 1998.",
+        "rfc": {
+          "num": "2324", 
+          "url": "https://tools.ietf.org/html/rfc2324#section-2.3.2"
+        }
+      },
+      "421": {
+        "reason_phrase": "Misdirect Request",
+        "definition": "The request was directed at a server that is not able to produce a response. This can be sent by a server that is not configured to produce responses for the combination of scheme and authority that are included in the request URI.",
+        "rfc": {
+          "num": "7540", 
+          "url": "https://tools.ietf.org/html/rfc7540#section-9.1.2"
+        }
+      },
+      "422": {
+        "reason_phrase": "Unprocessable Entity",
+        "type": "WebDAV",
+        "definition": "The request is understood by the server but the server is unable to process the contained instructions. For example, this error condition may occur if an XML request body contains well-formed, but semantically erroneous, XML instructions. The client should not repeat this request without modification.",
+        "rfc": {
+          "num": "4918", 
+          "url": "https://tools.ietf.org/html/rfc4918#section-11.2"
+        }
+      },
+      "423": {
+        "reason_phrase": "Locked",
+        "type": "WebDAV",
+        "definition": "The request is trying to access a locked resource. This response SHOULD contain an appropriate precondition or postcondition code, such as <code>lock-token-submitted</code> or <code>no-conflicting-lock</code>.",
+        "rfc": {
+          "num": "4918", 
+          "url": "https://tools.ietf.org/html/rfc4918#section-11.3"
+        }
+      },
+      "424": {
+        "reason_phrase": "Failed Dependency",
+        "type": "WebDAV",
+        "definition": "The request failed due to failure of a previous request.",
+        "rfc": {
+          "num": "4918", 
+          "url": "https://tools.ietf.org/html/rfc4918#section-11.4"
+        }
+      },
+      "425": {
+        "reason_phrase": "Too Early",
+        "status": "Experimental",
+        "definition": "The request is considered one that might be replayed and the server is unwilling to risk processing it for security reasons. Replayed requests create the potential for a replay attack.",
+        "rfc": {
+          "num": "8470", 
+          "url": "https://tools.ietf.org/html/rfc8470#section-5.2"
+        }
+      },
+      "426": {
+        "reason_phrase": "Upgrade Required",
+        "definition": "The request cannot be processed using the current protocol, but the server is willing to process it after the client upgrades to a different protocol. The server sends an <code>Upgrade</code> header with this response to indicate the required protocols.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.5.15"
+        }
+      },
+      "428": {
+        "reason_phrase": "Precondition Required",
+        "definition": "The request is not conditional and the server requires that it be conditional: A required precondition header, such as <code>If-Match</code>, is missing. When a precondition header is not matching the server side state, the response should be <code>412 Precondition Failed</code>.",
+        "rfc": {
+          "num": "6585", 
+          "url": "https://tools.ietf.org/html/rfc6585#section-3"
+        }
+      },
+      "429": {
+        "reason_phrase": "Too Many Requests",
+        "definition": "The request is one of too many sent by the user in a given amount of time (\"rate limiting\") Intended for use with rate limiting schemes. A <code>Retry-After</code> header might be included to this response indicating how long to wait before making a new request.",
+        "rfc": {
+          "num": "6585", 
+          "url": "https://tools.ietf.org/html/rfc6585#section-4"
+        }
+      },
+      "431": {
+        "reason_phrase": "Request Header Fields Too Large",
+        "definition": "The request's HTTP headers are too long, so the server refuses to process it. 431 can be used when the total size of request headers is too large, or when a single header field is too large. To help those running into this error, indicate which of the two is the problem in the response body — ideally, also include which headers are too large. This lets users attempt to fix the problem, such as by clearing their cookies. Servers will often produce this status if: The <code>Referer</code> URL is too long or if there are too many <code>Cookies</code> sent in the request.",
+        "rfc": {
+          "num": "6585", 
+          "url": "https://tools.ietf.org/html/rfc6585#section-5"
+        }
+      },
+      "451": {
+        "reason_phrase": "Unavailable For Legal Reasons",
+        "definition": "The request is looking for a resource that is not available due to legal reasons. Per example, a web page for which legal action has been issued.",
+        "rfc": {
+          "num": "7725", 
+          "url": "https://tools.ietf.org/html/rfc7725#section-3"
+        }
+      }
+    }
+  },
+  "server-error": {
+    "definition": "<code>Server error</code> status-codes indicate that the request was accepted, but an error on the server is preventing its fulfillment.",
+    "status": {
+      "500": {
+        "reason_phrase": "Internal Server Error",
+        "definition": "The request can't be fulfilled due to an unexpected condition encountered by the server. This error response is a generic \"catch-all\" response, given when no more specific message is suitable.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.6.1"
+        }
+      },
+      "501": {
+        "reason_phrase": "Not Implemented",
+        "definition": "The request can't be fulfilled because the server does not support the functionality required to fulfill it. A <code>Retry-After</code> header can also be sent to tell the requester when to check back to see if the functionality is supported by then. <code>501 Not Implemented</code> is the appropriate response when the server does not recognize the request method and is incapable of supporting it for any resource. The only methods that servers are required to support (and therefore that must not return <code>501 Not Implemented</code>) are <code>GET</code> and <code>HEAD</code>. If the server does recognize the method, but intentionally does not support it, the appropriate response is <code>405 Method Not Allowed</code>.",
+        "rfc": {
+          "num": "7231", 
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.6.2"
+        }
+      },
+      "502": {
+        "reason_phrase": "Bad Gateway",
+        "definition": "The request cannot be fulfilled because the server was acting as a gateway or a proxy and received an invalid response from the upstream server.",
+        "rfc": {
+          "num": "7231",
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.6.3"
+        }
+      },
+      "503": {
+        "reason_phrase": "Service Unavailable",
+        "definition": "The request cannot be handled by the server because it is overloaded or down for maintenance. In other words, the server is not ready to handle the request. This response should be used for temporary conditions and the <code>Retry-After</code> HTTP header should, if possible, contain the estimated time for the recovery of the service. Caching-related headers that are sent along with this response should be taken care of, as a <code>503 Service Unavailable</code> status is often a temporary condition and responses shouldn't usually be cached.",
+        "rfc": {
+          "num": "7231",
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.6.4"
+        }
+      },
+      "504": {
+        "reason_phrase": "Gateway Timeout",
+        "definition": "The request cannot be fulfilled because the server was acting as a gateway or a proxy and it did not receive a response in time from the upstream server.",
+        "rfc": {
+          "num": "7231",
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.6.5"
+        }
+      },
+      "505": {
+        "reason_phrase": "HTTP Version Not Supported",
+        "definition": "The request is using an HTTP version that is not supported by the server.",
+        "rfc": {
+          "num": "7231",
+          "url": "https://tools.ietf.org/html/rfc7231#section-6.6.6"
+        }
+      },
+      "506": {
+        "reason_phrase": "Variant Also Negotiates",
+        "definition": "The request was made in the context of Transparent Content Negotiation, a protocol that enables a client to retrieve the best variant of a given resource, where the server supports multiple variants. The <code>506 Variant Also Negotiates</code> status code indicates an internal server configuration error in which the chosen variant is itself configured to engage in content negotiation, so is not a proper negotiation endpoint.",
+        "rfc": {
+          "num": "2295", 
+          "url": "https://tools.ietf.org/html/rfc2295#section-8.1"
+        }
+      },
+      "507": {
+        "reason_phrase": "Insufficient Storage",
+        "type": "WebDAV",
+        "definition": "The request cannot be fulfilled because the server is unable to store the representation needed to complete it.",
+        "rfc": {
+          "num": "4918", 
+          "url": "https://tools.ietf.org/html/rfc4918#section-11.5"
+        }
+      },
+      "508": {
+        "reason_phrase": "Loop Detected",
+        "type": "WebDAV",
+        "definition": "The request cannot be fulfilled because the server detected an infinite loop while processing it. This status indicates that the entire operation failed.",
+        "rfc": {
+          "num": "5842", 
+          "url": "https://tools.ietf.org/html/rfc5842#section-7.2"
+        }
+      },
+      "510": {
+        "reason_phrase": "Not Extended",
+        "definition": "The request was made in the context of the HTTP Extension Framework and cannot be fulfilled because one, many or all the described extensions are not supported by it.",
+        "rfc": {
+          "num": "2774", 
+          "url": "https://tools.ietf.org/html/rfc2774#section-7"
+        }
+      },
+      "511": {
+        "reason_phrase": "Network Authentication Required",
+        "definition": "The request was made without proper identification. The client needs to authenticate to gain network access. This status is not generated by origin servers, but by intercepting proxies that control access to the network. Network operators sometimes require some authentication, acceptance of terms, or other user interaction before granting access (for example in an internet café or at an airport). They often identify clients who have not done so using their Media Access Control (MAC) addresses.",
+        "rfc": {
+          "num": "6585", 
+          "url": "https://tools.ietf.org/html/rfc6585#section-6"
+        }
+      },
+      "598": {
+        "reason_phrase": "Network Read Timeout Error",
+        "definition": "This status code is not specified in any RFCs, but is used by some HTTP proxies to signal a network read timeout behind the proxy to a client in front of the proxy."
+      },
+      "599": {
+        "reason_phrase": "Network Connect Timeout Error",
+        "definition": "This status code is not specified in any RFCs, but is used by some HTTP proxies to signal a network connect timeout behind the proxy to a client in front of the proxy."
+      }
+    }
+  }
+}

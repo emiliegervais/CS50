@@ -20,7 +20,6 @@ This repository contains my solutions to each problem sets:
     - [Tideman](./pSet3/tideman/)
 - pSet4, 2020 → Memory (C)
     - [Filter (less)](./pSet4/filter/less/)
-    - Filter (more)
     - [Recover](./pSet4/recover/)
 - pSet5, 2020 → Data Structures (C)
     - [Speller](./pSet5/speller/)
@@ -37,4 +36,5 @@ This repository contains my solutions to each problem sets:
 - pSet8, 2020 → Track: Web
     - [Homepage](./pSet8/homepage/)
     - [Finance](./pSet8/finance/)
-- Final Project, 2020
+- Final Project, 2020 → Web Application
+    - [HTTP Status Code Cheatsheet](./final-project/)

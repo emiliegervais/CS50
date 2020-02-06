@@ -1,0 +1,15 @@
+/* _myapp/static/css/typography.css */
+
+body {
+  color: var(--dark-color);
+  font: normal 125% / 1.4 var(--text-font-stack);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font-stack);
+}
+
+code {
+  color: var(--green-color);
+}

@@ -1,0 +1,42 @@
+/* _myapp/static/css/templates/components/card.css */
+
+.card {
+  margin: 0 auto;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border-radius: 0.2rem;
+}
+
+.card__img {
+  width: 100%;
+  margin: 0;
+}
+
+.card__img > img {
+  width: 100%;
+  border-top-left-radius: 0.2rem;
+  border-top-right-radius: 0.2rem;
+}
+
+.card__meta {
+  padding: 1rem;
+}
+
+.card__meta > h2 {
+  margin: 0;
+}
+
+.card__meta a {
+  color: var(--light-color);
+  transition: all 0.2s ease;
+}
+
+.card__meta a:hover {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.card__meta hr {
+  height: 1px;
+  color: var(--light-color);
+}

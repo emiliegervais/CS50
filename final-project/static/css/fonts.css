@@ -1,0 +1,82 @@
+/* _myapp/static/css/fonts.css */
+
+/* https://pangrampangram.com/products/cirka?variant=14517391097898 */
+@font-face {
+  font-family: 'Cirka';
+  src: url('../fonts/cirka/Cirka-Regular.eot');
+  src: local('Cirka Regular'), local('Cirka-Regular'),
+      url('../fonts/cirka/Cirka-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/cirka/Cirka-Regular.woff2') format('woff2'),
+      url('../fonts/cirka/Cirka-Regular.woff') format('woff'),
+      url('../fonts/cirka/Cirka-Regular.ttf') format('truetype'),
+      url('../fonts/cirka/Cirka-Regular.svg#Cirka-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cirka';
+  src: url('../fonts/cirka/Cirka-Light.eot');
+  src: local('Cirka Light'), local('Cirka-Light'),
+      url('../fonts/cirka/Cirka-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/cirka/Cirka-Light.woff2') format('woff2'),
+      url('../fonts/cirka/Cirka-Light.woff') format('woff'),
+      url('../fonts/cirka/Cirka-Light.ttf') format('truetype'),
+      url('../fonts/cirka/Cirka-Light.svg#Cirka-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cirka';
+  src: url('../fonts/cirka/Cirka-Bold.eot');
+  src: local('Cirka Bold'), local('Cirka-Bold'),
+      url('../fonts/cirka/Cirka-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/cirka/Cirka-Bold.woff2') format('woff2'),
+      url('../fonts/cirka/Cirka-Bold.woff') format('woff'),
+      url('../fonts/cirka/Cirka-Bold.ttf') format('truetype'),
+      url('../fonts/cirka/Cirka-Bold.svg#Cirka-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* https://pangrampangram.com/products/neue-machina?*variant=14717504225322 */
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Regular.eot');
+  src: local('Neue Machina Regular'), 
+      local('NeueMachina-Regular'), url('../fonts/neue-machina/NeueMachina-Regular.eot?#iefix') format('embedded-opentype'), 
+      url('../fonts/neue-machina/NeueMachina-Regular.woff2') format('woff2'), 
+      url('../fonts/neue-machina/NeueMachina-Regular.woff') format('woff'), 
+      url('../fonts/neue-machina/NeueMachina-Regular.ttf') format('truetype'),
+      url('../fonts/neue-machina/NeueMachina-Regular.svg#NeueMachina-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Light.eot');
+  src: local('Neue Machina Light'), local('NeueMachina-Light'), 
+      url('../fonts/neue-machina/NeueMachina-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/neue-machina/NeueMachina-Light.woff2') format('woff2'),
+      url('../fonts/neue-machina/NeueMachina-Light.woff') format('woff'),
+      url('../fonts/neue-machina/NeueMachina-Light.ttf') format('truetype'),
+      url('../fonts/neue-machina/NeueMachina-Light.svg#NeueMachina-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('../fonts/neue-machina/NeueMachina-Ultrabold.eot');
+  src: local('Neue Machina Ultrabold'), local('NeueMachina-Ultrabold'), 
+      url('../fonts/neue-machina/NeueMachina-Ultrabold.eot?#iefix') format('embedded-opentype'), 
+      url('../fonts/neue-machina/NeueMachina-Ultrabold.woff2') format('woff2'),
+      url('../fonts/neue-machina/NeueMachina-Ultrabold.woff') format('woff'),
+      url('../fonts/neue-machina/NeueMachina-Ultrabold.ttf') format('truetype'),
+      url('../fonts/neue-machina/NeueMachina-Ultrabold.svg#NeueMachina-Ultrabold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+    

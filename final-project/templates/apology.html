@@ -1,0 +1,16 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+  Undefined | HTTP Status Code Cheatsheet
+{% endblock %} 
+
+{% block content %}
+<main class="apology">
+  <p>
+    The status code you are looking for is either unofficial or does not exist.
+    {% with class="index", link="/", value="Index" %} 
+      {% include "components/button.html" %} 
+    {% endwith %}
+  </p>
+</main>
+{% endblock %}

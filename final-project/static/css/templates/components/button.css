@@ -1,0 +1,84 @@
+/* _myapp/static/css/templates/components/button.css */
+
+/* generic btn styles */
+.btn {
+  padding: 1rem 2rem;
+  position: relative;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  font-size: 1em;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  z-index: 0;
+}
+
+.btn:before {
+  content: "";
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background: linear-gradient(
+    45deg,
+    var(--red-color),
+    var(--orange-color), 
+    var(--yellow-color),
+    var(--green-color),
+    var(--cyan-color),
+    var(--blue-color), 
+    var(--purple-color), 
+    var(--magenta-color), 
+    var(--red-color)
+  );
+  background-size: 400%;
+  filter: blur(5px);
+  opacity: 0;
+  z-index: -1;
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+}
+
+.btn:active {
+  color: var(--dark-color);
+}
+
+.btn:active:after {
+  background-color: transparent;
+}
+
+.btn:hover:before {
+  opacity: 1;
+}
+
+.btn:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--dark-color);
+  z-index: -1;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* specific btn--class styles */
+.btn--random {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.btn--index{
+  margin: 2rem auto 0; 
+  display: block;
+}

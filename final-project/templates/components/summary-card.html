@@ -1,0 +1,35 @@
+{# _myapp/templates/components/summary-card.html_ #}
+
+<details class="summary-card">
+  <summary class="summary-card__title">
+    {% if code.type is defined %}
+      {{ key }} {{ code.reason_phrase }} ({{ code.type }})
+    {% else %}
+      {{ key }} {{ code.reason_phrase }}
+    {% endif %}
+  </summary>
+  <div class="summary-card__content content">
+    <figure class="content__image">
+      <img
+      src="/static/images/{{ key }}.jpg"
+      alt="{{ key }} {{ code.reason_phrase }}"
+    />
+    </figure>
+    <div class="content__meta">
+      {% if code.status is defined %}
+        <p>{{ code.status | upper }}</p>
+      {% endif %}
+      <p>{{ code.definition | safe}}</p>
+      {% if code.rfc is defined %}
+        <p>
+          Defined in
+          <a 
+            href="{{code.rfc.url}}" 
+            title="RFC {{code.rfc.num}}" 
+            target="_blank"
+          >RFC {{code.rfc.num}}</a>.
+        </p>
+      {% endif %}
+    </div>
+  </div>
+</details>

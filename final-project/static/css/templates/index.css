@@ -1,0 +1,27 @@
+/* _myapp/static/css/templates/index.css */
+
+.response-class {
+  border-top: 1px solid var(--dark-color);
+}
+
+.response-class:not(:last-child) {
+  margin-bottom: 5rem;
+}
+
+.response-class__name {
+  margin: 1rem 0;
+  font: 1.5em var(--title-font-stack);
+  font-weight: 600;
+}
+
+.response-class__definition {
+  margin: 0 0 1.5rem;
+}
+
+.response-class__definition code {
+  color: var(--blue-color);
+}
+
+.response-class__code {
+  margin: 0;
+}

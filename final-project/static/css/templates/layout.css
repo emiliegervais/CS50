@@ -1,0 +1,30 @@
+/* _myapp/static/css/templates/layout.css */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  background-color: var(--light-color);
+  transition: padding 0.2s ease;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+}
+
+a {
+  color: var(--dark-color);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}

@@ -1,0 +1,22 @@
+/* _myapp/static/css/styles.css */
+
+/* configuration */
+@import url('variables.css');
+
+/* base */
+@import url('fonts.css');
+@import url('typography.css');
+
+/* layout */
+@import url('templates/layout.css');
+@import url('templates/partials/header.css');
+@import url('templates/partials/footer.css');
+
+/* components */
+@import url('templates/components/button.css');
+@import url('templates/components/card.css');
+@import url('templates/components/summary-card.css');
+
+/* pages */
+@import url('templates/apology.css');
+@import url('templates/index.css');

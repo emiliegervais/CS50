@@ -1,0 +1,23 @@
+/* _myapp/static/css/variables.css */
+
+:root {
+
+  /* color variables */
+  --light-color: hsl(0, 0%, 95%);
+  --dark-color: hsl(0, 0%, 10%);
+  --red-color: hsl(336, 100%, 50%);
+  --orange-color: hsl(40, 100%, 50%);
+  --yellow-color: hsl(56, 100%, 75%);
+  --green-color: hsl(156, 100%, 50%);
+  --cyan-color: hsl(170, 100%, 50%);
+  --blue-color: hsl(200, 100%, 50%);
+  --purple-color: hsl(280, 100%, 50%);
+  --magenta-color: hsl(320, 100%, 50%);
+
+  /* typography variables */
+  --text-font-stack: 'Neue Machina', 'Lucida Console', 'Bitstream Vera Sans Mono', 'Monaco', monospace;
+  --title-font-stack: 'Cirka', 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+  
+  /* layout variables */
+  --max-width: 1080px;
+}

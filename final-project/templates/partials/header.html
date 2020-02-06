@@ -1,0 +1,12 @@
+{# _myapp/templates/partials/header.html_ #}
+
+<header>
+  {% with class="random", link="/status", value="Take me to a Random Status!" %}
+    {% include "components/button.html" %} 
+  {% endwith %}
+  <h1>HTTP Status Code Cheatsheet</h1>
+  <p>
+    A HTTP Status Code is issued from the server in response to a client's
+    request made to the server.
+  </p>
+</header>

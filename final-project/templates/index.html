@@ -1,0 +1,23 @@
+{# _myapp/templates/index.html_ #}
+
+{% extends "layout.html" %}
+
+{% block title %}
+  Index | HTTP Status Code Cheatsheet
+{% endblock %}
+
+{% block content %}
+<main>
+  {% for key, item in data.items() %}
+    <dl class="response-class">
+      <dt class="response-class__name">{{ key.upper() }}</dt>
+      <dd class="response-class__definition">{{ item.definition | safe }}</dd>
+      {% for key, code in item.status.items() %}
+        <dd class="response-class__code status-code">
+          {% include "components/summary-card.html" %}
+        </dd>
+      {% endfor %}
+    </dl>    
+  {% endfor %}
+</main>
+{% endblock %}

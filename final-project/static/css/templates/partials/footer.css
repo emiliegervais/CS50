@@ -1,0 +1,22 @@
+/* _myapp/static/css/templates/partials/footer.css */
+
+footer {
+  margin-top: 3rem;
+  padding: 1rem 0 2rem;
+  text-align: center;
+  font-size: 0.7em;
+}
+
+footer p:last-of-type {
+  margin-bottom: 0;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
