@@ -39,7 +39,8 @@ Since it is a small application, the architecture is basic:
 If it ever scales, it would require some refactoring. 
 
 #### Resources
-Status-code information was gathered from [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) and [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). 
+Status-code information was gathered from [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) and [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+
 Images are from [Museum of Internet](https://Museumofinter.net)
 
 ---
