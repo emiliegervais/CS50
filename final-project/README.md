@@ -21,20 +21,20 @@ Here, we gain access to a slightly more condensed status-code card. The goal of 
 Since it is a small application, the architecture is basic:
 ```
 ./
-	static/
-		css/
-		fonts/
-		images/
-		favicon.gif
-	templates/
-		components/
-		partials/
-	app.py
-	helpers.py
-	data.json
-	Procfile
-	README.md
-	requirements.txt
+  static/
+    css/
+    fonts/
+    images/
+    favicon.gif
+  templates/
+    components/
+    partials/
+  app.py
+  helpers.py
+  data.json
+  Procfile
+  README.md
+  requirements.txt
 ```
 If it ever scales, it would require some refactoring. 
 
