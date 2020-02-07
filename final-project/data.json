@@ -1,6 +1,6 @@
 {
   "informational": {
-    "definition": "<code>Informational</code> status-codes indicate that the request initiated by the browser is continuing.",
+    "definition": "Informational status-codes indicate that the request initiated by the browser is continuing.",
     "status": {
       "100": {
         "reason_phrase": "Continue",
@@ -12,7 +12,7 @@
       },
       "101": {
         "reason_phrase": "Switching Protocols",
-        "definition": "The request has asked the server to switch protocols. The server response indicates that it is switching protocol as requested. In this response, the srver includes an <code>Upgrade</code> response header to indicate the protocol it switched to.",
+        "definition": "The request has asked the server to switch protocols. The server response indicates that it is switching protocol as requested. In this response, the server includes an <code>Upgrade</code> response header to indicate the protocol it switched to.",
         "rfc": {
           "num": "7231", 
           "url": "https://tools.ietf.org/html/rfc7231#section-6.2.2"
@@ -38,7 +38,7 @@
     }
   },
   "successful": {
-    "definition": "<code>Successful</code> status-codes are returned when the browser request was succesfully received, understood and processed by the server.",
+    "definition": "Successful status-codes are returned when the browser request was succesfully received, understood and processed by the server.",
     "status": {
       "200": {
         "reason_phrase": "OK",
@@ -125,7 +125,7 @@
     }
   },
   "redirection": {
-    "definition": "<code>Redirection</code> status-codes are returned when a new resource has been substituted for the requested resource.",
+    "definition": "Redirection status-codes are returned when a new resource has been substituted for the requested resource.",
     "status": {
       "300": {
         "reason_phrase": "Multiple Choices",
@@ -202,7 +202,7 @@
     }
   },
   "client-error": {
-    "definition": "<code>Client error</code> status-codes indicate that there was a problem with the request.",
+    "definition": "Client error status-codes indicate that there was a problem with the request.",
     "status": {
       "400": {
         "reason_phrase": "Bad Request",
@@ -444,7 +444,7 @@
     }
   },
   "server-error": {
-    "definition": "<code>Server error</code> status-codes indicate that the request was accepted, but an error on the server is preventing its fulfillment.",
+    "definition": "Server error status-codes indicate that the request was accepted, but an error on the server is preventing its fulfillment.",
     "status": {
       "500": {
         "reason_phrase": "Internal Server Error",

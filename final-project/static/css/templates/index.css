@@ -18,10 +18,6 @@
   margin: 0 0 1.5rem;
 }
 
-.response-class__definition code {
-  color: var(--blue-color);
-}
-
 .response-class__code {
   margin: 0;
 }
