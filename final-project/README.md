@@ -16,7 +16,7 @@ This route redirects the user to a random status page. It is used by the giganti
 Here, we gain access to a slightly more condensed status-code card. The goal of this card is to give access to all of the information related to a specific status-code in one place easily accessible under a specific URL. The URL structure is made logic and simple because we want to be able to browse the cards using the browser's location bar only.
 
 ### Architecture 
-Since it is a small application and it won't ever scale, the architecture is _basic_:
+Since it is a small application and it won't ever scale, the architecture is basic:
 ```
 ./
   static/
