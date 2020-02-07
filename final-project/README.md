@@ -5,7 +5,7 @@
 ## About 
 For my CS50 Final Project, I wanted to build something that could be  useful for me & other developers. I ended up developing a simple, but aesthetically pleasant HTTP Status Code Cheatsheet web application.  Animal pictures corresponding to the different status codes were added for their cuteness.
 
-To run it: `python app.py`.
+To run it: `python app.py`
 
 ### Routes
 `./`
@@ -16,26 +16,6 @@ The status route redirects us to a random status page: it is used by the button 
 
 `./status/<code>`
 The status code route lets us access a condensed status code card displaying all the information related to that specific status code. The aim here is to provide us access to that information easily and quickly. The URL structure is logical, allowing us to browse the cards using the browser's location bar only.
-
-### Architecture 
-Since it is a small application and it won't ever scale, the architecture is basic:
-```
-./
-  static/
-    css/
-    fonts/
-    images/
-    favicon.gif
-  templates/
-    components/
-    partials/
-  app.py
-  helpers.py
-  data.json
-  Procfile
-  README.md
-  requirements.txt
-```
 
 #### Resources
 Status-code information was gathered from [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) and [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). 
