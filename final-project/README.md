@@ -17,7 +17,7 @@ The status route redirects us to a random status page: it is used by the button 
 `./status/<code>`
 The status code route lets us access a condensed status code card displaying all the information related to that specific status code. The aim here is to provide us access to that information easily and quickly. The URL structure is logical, allowing us to browse the cards using the browser's location bar only.
 
-#### Resources
+### Resources
 Status-code information was gathered from [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) and [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). 
 
 Images are from [Museum of Internet](https://Museumofinter.net).
