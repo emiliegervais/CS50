@@ -1,6 +1,6 @@
 # HTTP Status Code Cheatsheet
 
-**Environment:** Python, Flask, JavaScript, Jinja2, HTML5, CSS, Git, Heroku
+**Environment:** Python, Flask, JavaScript, Jinja2, HTML5, CSS
 
 ## About 
 For my CS50 Final Project, I wanted to make something that would end up being useful for me and other developers. I ended up developing a simple, but aesthetically pleasant HTTP Status Code Cheatsheet. Animal pictures corresponding to the different status-codes were added for their cuteness.
