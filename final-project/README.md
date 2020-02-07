@@ -16,7 +16,7 @@ This route redirects the user to a random status page. It is used by the giganti
 Here, we gain access to a slightly more condensed status-code card. The goal of this card is to give access to all of the information related to a specific status-code in one place easily accessible under a specific URL. The URL structure is made logic and simple because we want to be able to browse the cards using the browser's location bar only.
 
 ### Architecture 
-Since it is a small application, the architecture is basic:
+Since it is a small application and it won't ever scale, the architecture is basic:
 ```
 ./
   static/
@@ -34,14 +34,8 @@ Since it is a small application, the architecture is basic:
   README.md
   requirements.txt
 ```
-If it ever scales, it would require some refactoring. 
 
 #### Resources
 Status-code information was gathered from [Hypertext Transfer Protocol (HTTP) Status Code Registry](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml) and [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status). 
 
 Images are from [Museum of Internet](https://Museumofinter.net)
-
----
-Source for this project: [https://github.com/hexangel616/http-status-code-cheatsheet](https://github.com/hexangel616/http-status-code-cheatsheet)
-
-Project URL: [https://status-code-cheatsheet.herokuapp.com](https://status-code-cheatsheet.herokuapp.com)
