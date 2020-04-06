@@ -16,7 +16,7 @@ int main(int argc, string argv[])
         int k = atoi(argv[1]);
         
         // Check if there was a second argument passed with the program call
-        //     and that that second argument is higher than 0 (has to be to cypher with caesar)
+        // And that that second argument is higher than 0 (has to be to cypher with caesar)
         if (argc == 2 && k > 0)
         {
             // Prompt user for text to cypher
@@ -25,19 +25,18 @@ int main(int argc, string argv[])
             int length = strlen(text);
             // Create an array of the same length for the ciphered characters
             char res[length];
-            // Print "ciphertext: " now 
-            // ---> didn't find how to concatenate the ciphered characters at the end of the loop, is that possible with C? 
+            // Print "ciphertext: " now
             printf("ciphertext: ");
             for (int i = 0; i < length; i++) 
             {
                 // Case: Char is Uppercase
-                //     ascii value of A = 65
+                // Ascii value of A = 65
                 if (isupper(text[i])) 
                 {
                     res[i] = ((text[i] + k) - 65) % 26 + 65;
                 }
                 // Case: Char is Lowercase
-                //     ascii value of a = 97
+                // Ascii value of a = 97
                 else if (islower(text[i]))
                 {
                     res[i] = ((text[i] + k) - 97) % 26 + 97;

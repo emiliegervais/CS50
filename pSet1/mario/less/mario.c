@@ -18,7 +18,7 @@ void pyramid(int rows)
 {
     for (int i = 0; i < rows; i++)
     {
-        // Repeat for as long as num of columns is less than num of rows
+      // Repeat for as long as num of columns is less than num of rows
 	    for (int col = 0; col < rows; col++)
         {
             // Grid starts at 0 => rows - 1

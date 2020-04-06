@@ -47,7 +47,7 @@ int main(int argc, string argv[])
             // Get key for current character based on j
             int key = shift(k[j]);
             // Case: text[i] char is uppercase
-            //     ascii value of A = 65
+            // Ascii value of A = 65
             if (isupper(text[i]))
             {
                 // Rotate character using proper key & ascii value
@@ -56,7 +56,7 @@ int main(int argc, string argv[])
                 j = (j + 1) % k_length;
             }
             // Case: text[i] char is lowercase
-            //     ascii value of a = 97
+            // Ascii value of a = 97
             else if (islower(text[i]))
             {
                 // Rotate character using proper key & ascii value

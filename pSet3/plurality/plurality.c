@@ -66,21 +66,21 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-    // loop through candidates array
-    // array size is equal to candidate_count defined in main()
+    // Loop through candidates array
+    // Array size is equal to candidate_count defined in main()
     for (int i = 0; i < candidate_count; i++)
     {
-        // check if name matches one of the candidates' name
-        // if it's a match
+        // Check if name matches one of the candidates' name
+        // If it's a match
         if (!strcmp(candidates[i].name, name))
         {
-            // update candidate's vote total
+            // Update candidate's vote total
             candidates[i].votes++;
             return true;
         }
-        // otherwise, keep looping until the end of the array
+        // Otherwise, keep looping until the end of the array
     }
-    // if there are no match, return false
+    // If there are no match, return false
     return false;
 }
 
@@ -88,24 +88,24 @@ bool vote(string name)
 void print_winner(void)
 {
     // https://www.geeksforgeeks.org/c-program-find-largest-element-array/
-    // create an int equal to the num of votes of first candidate
+    // Create an int equal to the num of votes of first candidate
     int highest = candidates[0].votes;
 
-    // loop through candidate array
+    // Loop through candidate array
     for (int i = 0; i < candidate_count; i++)
     {
-        // check if highest is smaller than this candidate's votes
+        // Check if highest is smaller than this candidate's votes
         if (highest < candidates[i].votes)
         {
-            // if it is, highest is equal to this number of votes
+            // If it is, highest is equal to this number of votes
             highest = candidates[i].votes;
         }
-        // otherwise, highest remains highest
+        // Otherwise, highest remains highest
 
-        // check when highest is equal to candidates' number of votes
+        // Check when highest is equal to candidates' number of votes
         if (highest == candidates[i].votes)
         {
-            // print candidates' name if it is
+            // Print candidates' name if it is
             printf("%s\n", candidates[i].name);
         }
     }

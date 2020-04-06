@@ -19,8 +19,8 @@ node;
 // Number of buckets in hash table
 const unsigned int N = 26;
 
-// initiate hash_value
-// unsigned int for positive values
+// Initiate hash_value
+// Unsigned int for positive values
 unsigned int hash_value;
 
 // Initialize number of words in hash table
@@ -32,22 +32,22 @@ node *table[N];
 // Returns true if word is in dictionary else false
 bool check(const char *word)
 {
-    // hash the word to get hash value
+    // Hash the word to get hash value
     hash_value = hash(word);
-    // access linked list at hash_value index in the hash table
+    // Access linked list at hash_value index in the hash table
     node *cursor = table[hash_value];
 
-    // traverse linked list
+    // Traverse linked list
     while (cursor != NULL)
     {
-        // if the word is in the dictionnary
+        // If the word is in the dictionnary
         // strcasecmp: is case-insensitive
         if (strcasecmp(word, cursor->word) == 0)
         {
             return true;
         }
 
-        // set cursor to next item
+        // Set cursor to next item
         cursor = cursor->next;
     }
     return false;
@@ -71,87 +71,87 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
 {
-    // open dictionary as file
+    // Open dictionary as file
     FILE *file = fopen(dictionary, "r");
 
-    // if no file, return false
+    // If no file, return false
     if (file == NULL)
     {
         return false;
     }
 
-    // buffer space for word
+    // Buffer space for word
     char word[LENGTH + 1];
 
-    // scan file for strings until fscanf returns EOF
+    // Scan file for strings until fscanf returns EOF
     while (fscanf(file, "%s", word) != EOF)
     {
-        // allocate memory for new node
+        // Allocate memory for new node
         node *n = malloc(sizeof(node));
 
-        // if malloc returns NULL, return false
+        // If malloc returns NULL, return false
         if (n == NULL)
         {
             return false;
         }
 
-        // pointer to next node and word itself
+        // Pointer to next node and word itself
         strcpy(n->word, word);
-        // hash the word to get hash value
+        // Hash the word to get hash value
         hash_value = hash(word);
-        // set new pointer
+        // Set new pointer
         n->next = table[hash_value];
-        // set head to new pointer
+        // Set head to new pointer
         table[hash_value] = n;
-        // increase word_count by 1 on every entry
+        // Increase word_count by 1 on every entry
         word_count++;
     }
 
-    // close file
+    // Close file
     fclose(file);
 
-    // dictionnary is loaded, return true
+    // Dictionnary is loaded, return true
     return true;
 }
 
 // Returns number of words in dictionary if loaded else 0 if not yet loaded
 unsigned int size(void)
 {
-    // check if word_count is bigger than 0
+    // Check if word_count is bigger than 0
     if (word_count > 0)
     {
-        // yes return number of words
+        // Return number of words
         return word_count;
     }
-    // otherwise, return 0
+    // Otherwise, return 0
     return 0;
 }
 
 // Unloads dictionary from memory, returning true if successful else false
 bool unload(void)
 {
-    // iterate over every bunker
+    // Iterate over every bunker
     for (int i = 0; i < N; i++)
     {
-        // set cursor to this bunker's location in the table
+        // Set cursor to this bunker's location in the table
         node *cursor = table[i];
 
-        // free cursor if not NULL
+        // Free cursor if not NULL
         while (cursor)
         {
-            // swap: set dummy variable tmp to be equal to cursor
-            // using tmp: don't wanna lose access to the rest of the nodes
+            // Swap: set dummy variable tmp to be equal to cursor
+            // Using tmp: don't wanna lose access to the rest of the nodes
             node *tmp = cursor;
-            // set cursor to next item
+            // Set cursor to next item
             cursor = cursor->next;
-            // free temp
+            // Free temp
             free(tmp);
         }
 
-        // if last bunker in table and cursor is NULL
+        // If last bunker in table and cursor is NULL
         if (i == N - 1 && cursor == NULL)
         {
-            // is successful, return true
+            // Is successful, return true
             return true;
         }
     }

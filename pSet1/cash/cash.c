@@ -16,8 +16,8 @@ int penny = 1;
 
 int main(void) 
 {
-    // while change is negative
-    //     prompt the user for how much change is owed
+    // While change is negative
+    // Prompt the user for how much change is owed
     while (change < 0)
     {
         change = get_float("Changed Owed: ");
@@ -26,9 +26,8 @@ int main(void)
     // Round change amount to the nearest penny
     cents = round(change * 100);
     
-    // REFACTOR THIS PART
-    //     count amount of quarters, dimes, nickels and pennies held in cents
-    //     add +1 to coins everytime 
+    // Count amount of quarters, dimes, nickels and pennies held in cents
+    // Add 1 to coins everytime 
     while (cents >= quarter)
     {
         cents -= quarter;
